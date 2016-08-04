@@ -1,0 +1,50 @@
+/*!
+ * docs scss
+ */
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #444;
+    font-size: 13px;
+    text-rendering: optimizeLegibility;
+    background: #f4f4f4;
+}
+
+.navbar {
+	.navbar-transparent {
+	}
+}
+
+.section-header {
+	width: 100%;
+	height: 150px;
+	background: transparent url("http://huaban.com/img/login_header_blurbg.jpg") 0 0 no-repeat;
+	background-size: cover;
+	overflow: hidden;
+	display: block;
+	color: #fff;
+	padding: 15px 0;
+}
+.footer {
+	margin: 0 auto;
+	padding: 30px 30px 20px 30px;
+	font-size: 13px;
+	color: #999;
+	background-color: #fff;
+	a {
+		font-weight: 500;
+		color: #55595c;
+	}
+	p {
+		margin-bottom: 0;
+	}
+	ul {
+		padding-left: 0;
+		> li {
+			display: inline-block;
+			& + li {
+				margin-left: 1rem;
+			}
+		}
+	}
+}
