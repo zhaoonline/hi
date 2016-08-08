@@ -3,10 +3,6 @@
  */
 
 body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #444;
-    font-size: 13px;
-    text-rendering: optimizeLegibility;
     background: #f4f4f4;
 }
 
@@ -17,16 +13,52 @@ body {
 
 .section-header {
 	width: 100%;
-	height: 150px;
 	background: transparent url("http://huaban.com/img/login_header_blurbg.jpg") 0 0 no-repeat;
 	background-size: cover;
 	overflow: hidden;
 	display: block;
 	color: #fff;
-	padding: 15px 0;
+	padding: 30px 0;
+}
+.container {
+	.page-head {
+		padding-bottom: 9px;
+	    margin: 40px 0 20px;
+	    border-bottom: 1px solid #eee;
+	}
+	.highlight {
+	    padding: 9px 14px;
+	    margin-bottom: 14px;
+	    background-color: #f7f7f9;
+	    border: 1px solid #e1e1e8;
+	    border-radius: 4px;
+	}
+	.docs-blockquote {
+		margin: 15px 0;
+		background-color: #fff;
+	}
+	.docs-example {
+		position: relative;
+	    background-color: #fff;
+	    padding: 30px 15px 15px 15px;
+	    border-color: #e5e5e5 #eee #eee;
+	    border-style: solid;
+	    border-width: 1px 0;
+	    &:after {
+    	    position: absolute;
+		    top: 10px;
+		    left: 10px;
+		    font-size: 12px;
+		    font-weight: 700;
+		    color: #959595;
+		    text-transform: uppercase;
+		    letter-spacing: 1px;
+	        content: "实例：" !important;
+	    }
+	}
 }
 .footer {
-	margin: 0 auto;
+	margin: 30px auto;
 	padding: 30px 30px 20px 30px;
 	font-size: 13px;
 	color: #999;

@@ -12,6 +12,7 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     cleanCSS = require('gulp-clean-css'),
     // html
+    ejs = require('gulp-ejs'),
     htmlmin = require('gulp-htmlmin'),
     // images
     imagemin = require('gulp-imagemin'),
@@ -24,7 +25,7 @@ var paths = {
     src: {
         js: './src/js/*.js',
         scss: './src/scss/*.scss',
-        html: './src/*.html',
+        ejs: './src/*.ejs',
         img: './src/img/*',
         fonts: './src/fonts/*'
     },
@@ -52,7 +53,7 @@ gulp.task('js', function (done) {
         .pipe(notify({message: 'Script task complete'}));
 });
 
-// scss
+// scss to css
 gulp.task('scss', function(done) {
     return gulp.src(paths.src.scss)
         .pipe(sourcemaps.init())
@@ -66,9 +67,10 @@ gulp.task('scss', function(done) {
         .pipe(notify({message: 'Style task complete'}));
 });
 
-// html
-gulp.task('html', function (done) {
-    return gulp.src(paths.src.html)
+// ejs to html
+gulp.task('ejs', function (done) {
+    return gulp.src(paths.src.ejs)
+        .pipe(ejs({}, {ext: '.html'}).on('error', gutil.log))
         .pipe(htmlmin({
             removeComments: true,
             collapseWhitespace: true,
@@ -108,19 +110,19 @@ gulp.task('clean', function() {
 });
 
 // build
-gulp.task('build', ['html', 'scss', 'js', 'img', 'fonts']);
+gulp.task('build', ['ejs', 'scss', 'js', 'img', 'fonts']);
 
 // watch
 gulp.task('watch', function() {
    	gulp.watch(paths.src.js, ['js']);
   	gulp.watch(paths.src.scss, ['scss']);
-    gulp.watch(paths.src.html, ['html']);
+    gulp.watch(paths.src.ejs, ['ejs']);
     gulp.watch(paths.src.img, ['img']);
     gulp.watch(paths.src.fonts, ['fonts']);
 });
 
 // serve
-gulp.task('serve', ['html', 'scss', 'js', 'img', 'fonts', 'watch'], function () {
+gulp.task('serve', ['ejs', 'scss', 'js', 'img', 'fonts', 'watch'], function () {
     browserSync.init(null, {
         server: {
             baseDir: 'dist',

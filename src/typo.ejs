@@ -1,0 +1,218 @@
+<%include _parts/head%>
+<%include _parts/header%>
+
+<!--
+==================================================
+		            Content
+==================================================
+-->
+
+<div class="section-header">
+	<div class="container">
+		<h1>Hi UI</h1>
+		<p class="lead">简洁、直观、强悍、轻量的前端框架，让web开发更迅速.</p>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-3 col-md-push-9">
+			<%include _parts/nav%>
+		</div>
+	<div class="col-md-9 col-md-pull-3">
+		<h1 class="page-head">一、排版</h1>
+		<h2>1. 标题</h2>
+		<p class="lead">
+			HTML 中的所有标题标签，<code>&lt;h1&gt;</code> 到 <code>&lt;h6&gt;</code> 均可使用。另外，还提供了 .h1 到 .h6 类，为的是给内联（inline）属性的文本赋予标题的样式
+		</p>
+		<div class="docs-example">
+			<h1>h1. HI 标题 <small>二级标题</small></h1>
+			<h2>h2. HI 标题 <small>二级标题</small></h2>
+			<h3>h3. HI 标题 <small>二级标题</small></h3>
+			<h4>h4. HI 标题 <small>二级标题</small></h4>
+			<h5>h5. HI 标题 <small>二级标题</small></h5>
+			<h6>h6. HI 标题 <small>二级标题</small></h6>
+		</div>
+		<h2>2. 页面主体</h2>
+		<p class="lead">
+			Hi 将全局 font-size 设置为 14px，line-height 设置为 1.5。这些属性直接赋予 <code>&lt;body&gt;</code> 元素和所有段落元素。另外，<code>&lt;p&gt;</code> （段落）元素还被设置了等于 1/2 行高（即 10px）的底部外边距（margin）。
+		</p>
+		<div class="docs-example">
+			<p>
+				Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。Node.js 的包管理器 npm，是全球最大的开源库生态系统。
+			</p>
+		</div>
+		<h3>1). 中心内容</h3>
+		<p class="lead">
+			通过添加 .lead 类可以让段落突出显示。
+		</p>
+		<div class="docs-example">
+			<p class="lead">
+				Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。Node.js 的包管理器 npm，是全球最大的开源库生态系统。
+			</p>
+		</div>
+		<h2>3. 内联文本元素</h2>
+		<h3>1). 突出文本</h3>
+		<p class="lead">
+			突出文本使用<code>&lt;mark&gt;</code>标签
+		</p>
+		<div class="docs-example">
+			<p>
+				使用mark标签<mark>突出显示文本</mark>
+			</p>
+		</div>
+		<h3>2). 被删除的文本</h3>
+		<p class="lead">
+			对于被删除的文本使用 <code>&lt;del&gt;</code> 标签。
+		</p>
+		<div class="docs-example">
+			<p>
+				<del>这是一段被删除的文本</del>
+			</p>
+		</div>
+		<h3>3). 无用文本</h3>
+		<p class="lead">
+			对于没用的文本使用 <code>&lt;s&gt;</code> 标签。
+		</p>
+		<div class="docs-example">
+			<p>
+				<s>这是一段无用文本</s>
+			</p>
+		</div>
+		<h3>4). 插入文本</h3>
+		<p class="lead">
+			额外插入的文本使用 <code>&lt;ins&gt;</code> 标签。
+		</p>
+		<div class="docs-example">
+			<p>
+				<ins>这是一段额外插入的文本</ins>
+			</p>
+		</div>
+		<h3>5). 带下划线的文本</h3>
+		<p class="lead">
+			为文本添加下划线，使用 <code>&lt;u&gt;</code> 标签。
+		</p>
+		<div class="docs-example">
+			<p>
+				<u>这是一段带下划线的文本</u>
+			</p>
+		</div>
+		<h3>6). 小号文本</h3>
+		<p class="lead">
+			对于不需要强调的inline或block类型的文本，使用 <code>&lt;small&gt;</code> 标签包裹，其内的文本将被设置为父容器字体大小的 85%。标题元素中嵌套的 <code>&lt;small&gt;</code> 元素被设置不同的 font-size 。
+		</p>
+		<div class="docs-example">
+			<p>
+				<small>这是一段小号文本</small>
+			</p>
+		</div>
+		<h3>7). 着重</h3>
+		<p class="lead">
+			通过增加 font-weight 值强调一段文本。
+		</p>
+		<div class="docs-example">
+			<p>
+				<strong>这是一段着重文本</strong>
+			</p>
+		</div>
+		<h3>8). 斜体</h3>
+		<p class="lead">
+			用斜体强调一段文本。
+		</p>
+		<div class="docs-example">
+			<p>
+				<em>这是一段斜体文本</em>
+			</p>
+		</div>
+		<h2>4. 对齐</h2>
+		<p class="lead">
+			通过文本对齐类，可以简单方便的将文字重新对齐。
+		</p>
+		<div class="docs-example">
+			<p class="text-left">向左对齐。</p>
+			<p class="text-center">中心对齐。</p>
+			<p class="text-right">向右对齐。</p>
+			<p class="text-justify">正常文本。</p>
+			<p class="text-nowrap">不换行文本不换行文本不换行文本不换行文本不换行文本不换行文本不换行文本不换行文本不换行文本不换行文本不换行文本不换行文本不换行文本不换行文本。</p>
+		</div>
+		<h2>5. 改变大小写</h2>
+		<p class="lead">
+			通过文本对齐类，可以简单方便的将文字重新对齐。
+		</p>
+		<div class="docs-example">
+			<p class="text-lowercase">test, 小写文本。</p>
+			<p class="text-uppercase">test, 大写文本。</p>
+			<p class="text-capitalize">test, 首字母大写，对中文无意义。</p>
+		</div>
+		<h2>6. 缩略语</h2>
+		<h3>1). 基本缩略语</h3>
+		<p class="lead">
+			当鼠标悬停在缩写和缩写词上时就会显示完整内容，Bootstrap 实现了对 HTML 的 <code>&lt;abbr&gt;</code> 元素的增强样式。缩略语元素带有 <code>title</code> 属性，外观表现为带有较浅的虚线框，鼠标移至上面时会变成带有“问号”的指针。如想看完整的内容可把鼠标悬停在缩略语上（对使用辅助技术的用户也可见）, 但需要包含 title 属性。
+		</p>
+		<div class="docs-example">
+			<p>
+				An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.
+			</p>
+		</div>
+		<h3>1). 首字母缩略语</h3>
+		<p class="lead">
+			为缩略语添加 <code>.initialism</code> 类，可以让 font-size 变得稍微小些。
+		</p>
+		<div class="docs-example">
+			<p>
+				<abbr title="HyperText Markup Language" class="initialism">HTML</abbr> is the best thing since sliced bread.
+			</p>
+		</div>
+		<h2>6. 地址</h2>
+		<p class="lead">
+			让联系信息以最接近日常使用的格式呈现。在每行结尾添加 <code>&lt;br&gt;</code> 可以保留需要的样式。
+		</p>
+		<div class="docs-example">
+			<address>
+				<strong>赵涌在线.</strong><br>
+				闵行区田林路1016号科技绿洲三期2-1号楼<br>
+				中国，上海市<br>
+				<abbr title="联系电话">电话:</abbr> +86-21-23099900
+			</address>
+			<address>
+				<strong>姓名</strong><br>
+				<a href="mailto:#">first.last@example.com</a>
+			</address>
+		</div>
+		<h2>7. 地址</h2>
+		<h3>1). 默认样式的引用</h3>
+		<p class="lead">
+			将任何 <abbr title="HyperText Markup Language">HTML</abbr> 元素包裹在 <code>&lt;blockquote&gt;</code> 中即可表现为引用样式。对于直接引用，我们建议用 <code>&lt;p&gt;</code> 标签。
+		</p>
+		<div class="docs-example">
+			<blockquote>
+		      	<p>
+					Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。Node.js 的包管理器 npm，是全球最大的开源库生态系统。
+		      	</p>
+		    </blockquote>
+		</div>
+		<h3>2). 多种引用样式</h3>
+		<p class="lead">
+			对于标准样式的 <code>&lt;blockquote&gt;</code>，可以通过几个简单的变体就能改变风格和内容。
+		</p>
+		<h4>命名来源</h4>
+		<div class="docs-example">
+			<blockquote>
+		      	<p>
+					Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。Node.js 的包管理器 npm，是全球最大的开源库生态系统。
+		      	</p>
+		      	<footer>Node.js官网</footer>
+		    </blockquote>
+		</div>
+		<h4>另一种展现风格</h4>
+		<div class="docs-example">
+			<blockquote class="blockquote-reverse">
+		      	<p>
+					Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。Node.js 的包管理器 npm，是全球最大的开源库生态系统。
+		      	</p>
+		      	<footer>Node.js官网</footer>
+		    </blockquote>
+		</div>
+	</div>
+</div>
+
+<%include _parts/foot%>

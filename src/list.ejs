@@ -1,0 +1,111 @@
+<%include _parts/head%>
+<%include _parts/header%>
+
+<!--
+==================================================
+		            Content
+==================================================
+-->
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-3 col-md-push-9">
+			<%include _parts/nav%>
+		</div>
+	<div class="col-md-9 col-md-pull-3">
+		<h1 class="page-head">二、列表</h1>
+		<h2>1. 无序列表</h2>
+		<p class="lead">
+			排列顺序<em>无关紧要</em>的一列元素。
+		</p>
+		<div class="docs-example">
+			<ul>
+				<li>我是无序列表内容</li>
+				<li>我是无序列表内容</li>
+				<li>我是无序列表内容</li>
+				<li>我是无序列表内容</li>
+				<li>我是无序列表内容
+					<ul>
+						<li>我是无序列表内容</li>
+						<li>我是无序列表内容</li>
+						<li>我是无序列表内容</li>
+						<li>我是无序列表内容</li>
+					</ul>
+				</li>
+				<li>我是无序列表内容</li>
+				<li>我是无序列表内容</li>
+				<li>我是无序列表内容</li>
+				<li>我是无序列表内容</li>
+			</ul>
+		</div>
+		<h2>2. 有序列表</h2>
+		<p class="lead">
+			顺序<em>至关重要</em>的一组元素。
+		</p>
+		<div class="docs-example">
+			<ol>
+		      	<li>我是有序列表内容</li>
+		      	<li>我是有序列表内容</li>
+		      	<li>我是有序列表内容</li>
+		      	<li>我是有序列表内容</li>
+		    </ol>
+		</div>
+		<h2>3. 无样式列表</h2>
+		<p class="lead">
+			移除了默认的 <code>list-style</code> 样式和左侧外边距的一组元素（只针对直接子元素）。<strong>这是针对直接子元素的</strong>，也就是说，你需要对所有嵌套的列表都添加这个类才能具有同样的样式。
+		</p>
+		<div class="docs-example">
+			<ul class="list-unstyled">
+				<li>我是无样式列表内容</li>
+				<li>我是无样式列表内容</li>
+				<li>我是无样式列表内容</li>
+				<li>我是无样式列表内容</li>
+			</ul>
+		</div>
+		<h2>4. 内联列表</h2>
+		<p class="lead">
+			通过设置 <code>display: inline-block;</code> 并添加少量的内补（padding），将所有元素放置于同一行。
+		</p>
+		<div class="docs-example">
+			<ul class="list-inline">
+				<li class="list-inline-item">我是内联列表内容</li>
+				<li class="list-inline-item">我是内联列表内容</li>
+				<li class="list-inline-item">我是内联列表内容</li>
+				<li class="list-inline-item">我是内联列表内容</li>
+			</ul>
+		</div>
+		<h2>5. 描述</h2>
+		<p class="lead">
+			带有描述的短语列表
+		</p>
+		<div class="docs-example">
+			<dl>
+				<dt>描述标题</dt>
+				<dd>描述内容</dd>
+				<dt>描述标题</dt>
+				<dd>描述内容</dd>
+				<dt>描述标题</dt>
+				<dd>描述内容</dd>
+			</dl>
+		</div>
+		<h3>水平排列的描述</h3>
+		<div class="docs-example">
+			<dl class="dl-horizontal">
+				<dt>描述标题:</dt>
+				<dd>描述内容</dd>
+				<dt>描述标题描述标题:</dt>
+				<dd>描述内容</dd>
+				<dt>描述标题描述标题描述标题描述标题描述标题描述标题描述标题:</dt>
+				<dd>描述内容</dd>
+			</dl>
+		</div>
+		<blockquote class="docs-blockquote">
+	      	<p>
+				通过 <code>text-overflow</code> 属性，水平排列的描述列表将会截断左侧太长的短语。在较窄的视口（viewport）内，列表将变为默认堆叠排列的布局方式。
+	      	</p>
+	      	<footer>自动截断</footer>
+	    </blockquote>
+	</div>
+</div>
+
+<%include _parts/foot%>

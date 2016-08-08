@@ -4,6 +4,7 @@
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-top: $headings-margin-top;
   margin-bottom: $headings-margin-bottom;
   font-family: $headings-font-family;
   font-weight: $headings-font-weight;
@@ -72,6 +73,7 @@ small,
 .small {
   font-size: 80%;
   font-weight: normal;
+  color: #777;
 }
 
 mark,
@@ -95,6 +97,8 @@ mark,
 }
 .list-inline-item {
   display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
 
   &:not(:last-child) {
     margin-right: $list-inline-padding;
@@ -103,9 +107,23 @@ mark,
 
 // Horizontal description lists w/ grid classes
 .dl-horizontal {
-  margin-right: -$grid-gutter-width;
-  margin-left: -$grid-gutter-width;
-  @include clearfix;
+  dd {
+    @include clearfix;
+  }
+  @media (min-width: 768px) {
+    dt {
+      float: left;
+      width: 160px;
+      overflow: hidden;
+      clear: left;
+      text-align: right;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    dd {
+      margin-left: 180px;
+    }
+  }
 }
 
 
@@ -120,21 +138,20 @@ mark,
 }
 
 // Blockquotes
-.blockquote {
+blockquote, .blockquote {
   padding: ($spacer / 2) $spacer;
   margin-bottom: $spacer;
   font-size: $blockquote-font-size;
-  border-left: .25rem solid $blockquote-border-color;
-}
+  border-left: 4px solid $blockquote-border-color;
+  footer {
+    display: block;
+    font-size: 80%; // back to default font-size
+    line-height: $line-height;
+    color: $blockquote-small-color;
 
-.blockquote-footer {
-  display: block;
-  font-size: 80%; // back to default font-size
-  line-height: $line-height;
-  color: $blockquote-small-color;
-
-  &::before {
-    content: "\2014 \00A0"; // em dash, nbsp
+    &::before {
+      content: "\2014 \00A0"; // em dash, nbsp
+    }
   }
 }
 
@@ -154,4 +171,38 @@ mark,
   &::after {
     content: "\00A0 \2014"; // nbsp, em dash
   }
+}
+
+// Text
+// Alignment
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+.text-align {
+  white-space: nowrap;
+}
+
+// Transformation
+.text-lowercase {
+  text-transform: lowercase;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+// Contextual colors
+.text-muted {
+  color: $text-muted;
 }
