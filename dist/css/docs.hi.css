@@ -28,7 +28,10 @@ body {
 
 .container .docs-blockquote {
   margin: 15px 0;
-  background-color: #fff; }
+  background-color: #fff;
+  border-color: #ce4844; }
+  .container .docs-blockquote h4 {
+    color: #ce4844; }
 
 .container .docs-example {
   position: relative;
@@ -47,6 +50,10 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     content: "实例：" !important; }
+  .container .docs-example .btn, .container .docs-example .btn-group {
+    margin: 5px auto; }
+  .container .docs-example .card {
+    max-width: 320px; }
 
 .footer {
   margin: 30px auto;

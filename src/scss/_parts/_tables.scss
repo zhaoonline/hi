@@ -6,6 +6,14 @@
   width: 100%;
   max-width: 100%;
   margin-bottom: $spacer;
+  border-collapse: collapse;
+
+  caption {
+    padding-top: $table-cell-padding;
+    padding-bottom: $table-cell-padding;
+    color: $text-muted;
+    text-align: left;
+  }
 
   th,
   td {
@@ -13,6 +21,7 @@
     line-height: $line-height;
     vertical-align: top;
     border-top: $table-border-width solid $table-border-color;
+    text-align: left;
   }
 
   thead th {
@@ -20,15 +29,27 @@
     border-bottom: (2 * $table-border-width) solid $table-border-color;
   }
 
+  // Remove top border from thead by default
+  > caption + thead,
+  > colgroup + thead,
+  > thead:first-child,
+  > tbody:first-child {
+    > tr:first-child {
+      > th,
+      > td {
+        border-top: 0;
+      }
+    }
+  }
+
   tbody + tbody {
     border-top: (2 * $table-border-width) solid $table-border-color;
   }
 
-  .table {
-    background-color: $body-bg;
+  &.table {
+    background-color: $table-bg;
   }
 }
-
 
 //
 // Condensed table w/ half padding
@@ -86,6 +107,19 @@
   }
 }
 
+// Condensed table w/ half padding
+.table-condensed {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: $table-cell-padding / 2;
+      }
+    }
+  }
+}
 
 // Table backgrounds
 //
@@ -116,78 +150,7 @@
   //
   // border: $table-border-width solid $table-border-color;
   // -ms-overflow-style: -ms-autohiding-scrollbar; // See https://github.com/twbs/bootstrap/pull/10057
-}
-
-
-.thead-inverse {
-  th {
-    color: #fff;
-    background-color: $gray-dark;
-  }
-}
-.thead-default {
-  th {
-    color: $gray;
-    background-color: $gray-lighter;
-  }
-}
-
-.table-inverse {
-  color: $gray-lighter;
-  background-color: $gray-dark;
-
-  &.table-bordered {
-    border: 0;
-  }
-
-  th,
-  td,
-  thead th {
-    border-color: $gray;
-  }
-}
-
-
-.table-reflow {
-  thead {
-    float: left;
-  }
-
-  tbody {
-    display: block;
+  > .table > thead > tr > th {
     white-space: nowrap;
-  }
-
-  th,
-  td {
-    border-top: $table-border-width solid $table-border-color;
-    border-left: $table-border-width solid $table-border-color;
-
-    &:last-child {
-      border-right: $table-border-width solid $table-border-color;
-    }
-  }
-
-  thead,
-  tbody,
-  tfoot {
-    &:last-child {
-      tr:last-child {
-        th,
-        td {
-          border-bottom: $table-border-width solid $table-border-color;
-        }
-      }
-    }
-  }
-
-  tr {
-    float: left;
-
-    th,
-    td {
-      display: block !important;
-      border: $table-border-width solid $table-border-color;
-    }
   }
 }

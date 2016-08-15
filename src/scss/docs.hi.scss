@@ -36,6 +36,10 @@ body {
 	.docs-blockquote {
 		margin: 15px 0;
 		background-color: #fff;
+		border-color: #ce4844;
+		h4 {
+			color: #ce4844;
+		}
 	}
 	.docs-example {
 		position: relative;
@@ -54,6 +58,12 @@ body {
 		    text-transform: uppercase;
 		    letter-spacing: 1px;
 	        content: "实例：" !important;
+	    }
+	    .btn, .btn-group {
+	    	margin: 5px auto;
+	    }
+	    .card {
+	    	max-width: 320px;
 	    }
 	}
 }

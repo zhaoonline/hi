@@ -13,98 +13,131 @@
 			<%include _parts/nav%>
 		</div>
 	<div class="col-md-9 col-md-pull-3">
-		<h1 class="page-head">二、列表</h1>
-		<h2>1. 无序列表</h2>
+		<h1 class="page-head">七、列表</h1>
+		<h2>1. 基本实例</h2>
 		<p class="lead">
-			排列顺序<em>无关紧要</em>的一列元素。
+			最简单的列表组仅仅是一个带有多个列表条目的无序列表，另外还需要设置适当的类。我们提供了一些预定义的样式，你可以根据自身的需求通过 CSS 自己定制。
 		</p>
 		<div class="docs-example">
-			<ul>
-				<li>我是无序列表内容</li>
-				<li>我是无序列表内容</li>
-				<li>我是无序列表内容</li>
-				<li>我是无序列表内容</li>
-				<li>我是无序列表内容
-					<ul>
-						<li>我是无序列表内容</li>
-						<li>我是无序列表内容</li>
-						<li>我是无序列表内容</li>
-						<li>我是无序列表内容</li>
-					</ul>
+			<ul class="list-group">
+				<li class="list-group-item">列表一</li>
+				<li class="list-group-item">列表二</li>
+				<li class="list-group-item">列表三</li>
+				<li class="list-group-item">列表四</li>
+			</ul>
+		</div>
+		<h2>2. 徽章</h2>
+		<p class="lead">
+			给列表组加入徽章组件，它会自动被放在右边。
+		</p>
+		<div class="docs-example">
+			<ul class="list-group">
+				<li class="list-group-item">
+					列表一
+					<span class="label label-default label-pill pull-xs-right">14</span>
 				</li>
-				<li>我是无序列表内容</li>
-				<li>我是无序列表内容</li>
-				<li>我是无序列表内容</li>
-				<li>我是无序列表内容</li>
+				<li class="list-group-item">
+					列表二
+					<span class="label label-default label-pill pull-xs-right">14</span>
+				</li>
+				<li class="list-group-item">
+					列表三
+					<span class="label label-default label-pill pull-xs-right">14</span>
+				</li>
+				<li class="list-group-item">
+					列表四
+					<span class="label label-default label-pill pull-xs-right">14</span>
+				</li>
 			</ul>
 		</div>
-		<h2>2. 有序列表</h2>
+		<h2>3. 链接</h2>
 		<p class="lead">
-			顺序<em>至关重要</em>的一组元素。
+			用 <code>&lt;a&gt;</code> 标签代替 <code>&lt;li&gt;</code> 标签可以组成一个全部是链接的列表组（还要注意的是，我们需要将 <code>&lt;ul&gt;</code> 标签替换为 <code>&lt;div&gt;</code> 标签）。没必要给列表组中的每个元素都加一个父元素。
 		</p>
 		<div class="docs-example">
-			<ol>
-		      	<li>我是有序列表内容</li>
-		      	<li>我是有序列表内容</li>
-		      	<li>我是有序列表内容</li>
-		      	<li>我是有序列表内容</li>
-		    </ol>
+			<div class="list-group">
+				<a class="list-group-item disabled">
+					列表一
+				</a>
+				<a class="list-group-item">
+					列表二
+				</a>
+				<a class="list-group-item">
+					列表三
+				</a>
+				<a class="list-group-item">
+					列表四
+				</a>
+			</div>
 		</div>
-		<h2>3. 无样式列表</h2>
+		<h2>4. 按钮</h2>
 		<p class="lead">
-			移除了默认的 <code>list-style</code> 样式和左侧外边距的一组元素（只针对直接子元素）。<strong>这是针对直接子元素的</strong>，也就是说，你需要对所有嵌套的列表都添加这个类才能具有同样的样式。
+			列表组中的元素也可以直接就是按钮（也同时意味着父元素必须是 <code>&lt;div&gt;</code> 而不能用 <code>&lt;ul&gt;</code> 了），并且无需为每个按钮单独包裹一个父元素。<strong class="text-danger">注意不要使用标准的 <code>.btn</code> 类！</strong>
 		</p>
 		<div class="docs-example">
-			<ul class="list-unstyled">
-				<li>我是无样式列表内容</li>
-				<li>我是无样式列表内容</li>
-				<li>我是无样式列表内容</li>
-				<li>我是无样式列表内容</li>
-			</ul>
+			<div class="list-group">
+				<button type="button" class="list-group-item disabled">
+					列表一
+				</button>
+				<button type="button" class="list-group-item">
+					列表二
+				</button>
+				<button type="button" class="list-group-item">
+					列表三
+				</button>
+				<button type="button" class="list-group-item">
+					列表四
+				</button>
+			</div>
 		</div>
-		<h2>4. 内联列表</h2>
+		<h2>5. 情景类</h2>
 		<p class="lead">
-			通过设置 <code>display: inline-block;</code> 并添加少量的内补（padding），将所有元素放置于同一行。
+			列表组中的元素也可以直接就是按钮（也同时意味着父元素必须是 <code>&lt;div&gt;</code> 而不能用 <code>&lt;ul&gt;</code> 了），并且无需为每个按钮单独包裹一个父元素。<strong class="text-danger">注意不要使用标准的 <code>.btn</code> 类！</strong>
 		</p>
 		<div class="docs-example">
-			<ul class="list-inline">
-				<li class="list-inline-item">我是内联列表内容</li>
-				<li class="list-inline-item">我是内联列表内容</li>
-				<li class="list-inline-item">我是内联列表内容</li>
-				<li class="list-inline-item">我是内联列表内容</li>
-			</ul>
+			<div class="row">
+				<div class="col-sm-6">
+					<ul class="list-group">
+						<li class="list-group-item list-group-item-success">列表一</li>
+						<li class="list-group-item list-group-item-info">列表二</li>
+						<li class="list-group-item list-group-item-warning">列表三</li>
+						<li class="list-group-item list-group-item-danger">列表四</li>
+					</ul>
+				</div>
+				<div class="col-sm-6">
+					<div class="list-group">
+						<a href="#" class="list-group-item list-group-item-success">列表一</a>
+						<a href="#" class="list-group-item list-group-item-info">列表二</a>
+						<a href="#" class="list-group-item list-group-item-warning">列表三</a>
+						<a href="#" class="list-group-item list-group-item-danger">列表四</a>
+					</div>
+				</div>
+			</div>
 		</div>
-		<h2>5. 描述</h2>
+		<h2>6. 定制内容</h2>
 		<p class="lead">
-			带有描述的短语列表
+			列表组中的每个元素都可以是任何 HTML 内容，甚至是像下面的带链接的列表组。
 		</p>
 		<div class="docs-example">
-			<dl>
-				<dt>描述标题</dt>
-				<dd>描述内容</dd>
-				<dt>描述标题</dt>
-				<dd>描述内容</dd>
-				<dt>描述标题</dt>
-				<dd>描述内容</dd>
-			</dl>
+			<div class="list-group">
+				<a class="list-group-item acitve">
+				    <h4 class="list-group-item-heading">标题</h4>
+					<p class="list-group-item-text">内容</p>
+				</a>
+				<a class="list-group-item">
+				   	<h4 class="list-group-item-heading">标题</h4>
+					<p class="list-group-item-text">内容</p>
+				</a>
+				<a class="list-group-item">
+					<h4 class="list-group-item-heading">标题</h4>
+					<p class="list-group-item-text">内容</p>
+				</a>
+				<a class="list-group-item">
+					<h4 class="list-group-item-heading">标题</h4>
+					<p class="list-group-item-text">内容</p>
+				</a>
+			</div>
 		</div>
-		<h3>水平排列的描述</h3>
-		<div class="docs-example">
-			<dl class="dl-horizontal">
-				<dt>描述标题:</dt>
-				<dd>描述内容</dd>
-				<dt>描述标题描述标题:</dt>
-				<dd>描述内容</dd>
-				<dt>描述标题描述标题描述标题描述标题描述标题描述标题描述标题:</dt>
-				<dd>描述内容</dd>
-			</dl>
-		</div>
-		<blockquote class="docs-blockquote">
-	      	<p>
-				通过 <code>text-overflow</code> 属性，水平排列的描述列表将会截断左侧太长的短语。在较窄的视口（viewport）内，列表将变为默认堆叠排列的布局方式。
-	      	</p>
-	      	<footer>自动截断</footer>
-	    </blockquote>
 	</div>
 </div>
 

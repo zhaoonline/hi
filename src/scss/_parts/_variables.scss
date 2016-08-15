@@ -244,6 +244,10 @@ $btn-padding-x:                  14px !default;
 $btn-padding-y:                  6px !default;
 $btn-font-weight:                normal !default;
 
+$btn-default-color:              #333 !default;
+$btn-default-bg:                 #fff !default;
+$btn-default-border:             #ccc !default;
+
 $btn-primary-color:              #fff !default;
 $btn-primary-bg:                 $brand-primary !default;
 $btn-primary-border:             $btn-primary-bg !default;
@@ -314,7 +318,7 @@ $input-height:                   (($font-size-base * $line-height) + ($input-pad
 $input-height-lg:                (($font-size-lg * $line-height-lg) + ($input-padding-y-lg * 2)) !default;
 $input-height-sm:                (($font-size-sm * $line-height-sm) + ($input-padding-y-sm * 2)) !default;
 
-$form-group-margin-bottom:       $spacer-y !default;
+$form-group-margin-bottom:       8px !default;
 
 $input-group-addon-bg:           $gray-lighter !default;
 $input-group-addon-border-color: $input-border-color !default;
@@ -452,6 +456,11 @@ $pager-disabled-color:                 $pagination-disabled-color !default;
 
 $jumbotron-padding:              32px !default;
 $jumbotron-bg:                   $gray-lighter !default;
+
+// Media
+$media-font-size:                $font-size-base !default;
+$media-heading-font-size:        18px !default;
+$media-p-margin-bottom:          4px !default;
 
 
 // Form states and alerts

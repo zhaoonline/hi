@@ -42,6 +42,14 @@
   }
 }
 
+.media {
+  font-size: $media-font-size;
+  .media-body {
+    p {
+      margin-bottom: $media-p-margin-bottom;
+    }
+  }
+}
 
 //
 // Images/elements as the media anchor
@@ -77,6 +85,7 @@
 .media-heading {
   margin-top: 0;
   margin-bottom: 5px;
+  font-size: $media-heading-font-size;
 }
 
 

@@ -51,3 +51,33 @@
   font-size: 90%;
   color: $gray-light;
 }
+
+
+//
+// Thumbnails
+// --------------------------------------------------
+
+
+// Mixin and adjust the regular image class
+.thumbnail {
+  display: block;
+  padding: $thumbnail-padding;
+  background-color: $thumbnail-bg;
+  border: $thumbnail-border-width solid $thumbnail-border-color;
+  border-radius: $thumbnail-border-radius;
+  @include transition(border .2s ease-in-out);
+
+  > img,
+  a > img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+}
+
+// Add a hover state for linked versions only
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+  border-color: $link-color;
+}

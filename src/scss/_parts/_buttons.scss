@@ -56,6 +56,9 @@ fieldset[disabled] a.btn {
 // Alternate buttons
 //
 
+.btn-default {
+  @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+}
 .btn-primary {
   @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 }
@@ -76,11 +79,12 @@ fieldset[disabled] a.btn {
 }
 
 // Remove all backgrounds
+.btn-default-outline {
+  @include button-outline-variant($btn-secondary-border);
+}
+// Remove all backgrounds
 .btn-primary-outline {
   @include button-outline-variant($btn-primary-bg);
-}
-.btn-secondary-outline {
-  @include button-outline-variant($btn-secondary-border);
 }
 .btn-info-outline {
   @include button-outline-variant($btn-info-bg);
