@@ -5,3 +5,7 @@
     clear: both;
   }
 }
+
+@mixin clear($clear: both) {
+  clear: $clear;
+}

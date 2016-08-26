@@ -1,5 +1,5 @@
-<%include _parts/head%>
-<%include _parts/header%>
+<%include ./_parts/head%>
+<%include ./_parts/header%>
 
 <!--
 ==================================================
@@ -9,229 +9,14 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-3 col-md-push-9">
-			<%include _parts/nav%>
-		</div>
-	<div class="col-md-9 col-md-pull-3">
-		<h1 class="page-head">三、表格</h1>
-		<h2>1. 基本实例</h2>
-		<p class="lead">
-			为任意 <code>&lt;table&gt;</code> 标签添加 <code>.table</code> 类可以为其赋予基本的样式 — 少量的内补（padding）和水平方向的分隔线。这种方式看起来很多余！？但是我们觉得，表格元素使用的很广泛，如果我们为其赋予默认样式可能会影响例如日历和日期选择之类的插件，所以我们选择将此样式独立出来。
-		</p>
-		<div class="docs-example">
-			<table class="table">
-				<caption>我是表格</caption>
-				<thead>
-					<tr>
-						<th>#</th>
-						<th>籍贯</th>
-						<th>姓名</th>
-						<th>手机号码</th>
-						<th>住址</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<th scope="row">1</th>
-						<td>中国</td>
-						<td>张三</td>
-						<td>18000000000</td>
-						<td>上海</td>
-					</tr>
-					<tr>
-						<th scope="row">1</th>
-						<td>中国</td>
-						<td>李四</td>
-						<td>18000000000</td>
-						<td>上海</td>
-					</tr>
-					<tr>
-						<th scope="row">1</th>
-						<td>中国</td>
-						<td>王五</td>
-						<td>18000000000</td>
-						<td>上海</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<h2>2. 条纹状表格</h2>
-		<p class="lead">
-			通过 <code>.table-striped</code> 类可以给 <code>&lt;tbody&gt;</code> 之内的每一行增加斑马条纹样式。
-		</p>
-		<blockquote class="docs-blockquote">
-			<h4>跨浏览器兼容性</h4>
-	      	<p>
-				条纹状表格是依赖 <code>:nth-child</code> CSS 选择器实现的，而这一功能不被 Internet Explorer 8 支持。
-	      	</p>
-	    </blockquote>
-		<div class="docs-example">
-			<table class="table table-striped">
-				<caption>我是表格</caption>
-				<thead>
-					<tr>
-						<th>#</th>
-						<th>籍贯</th>
-						<th>姓名</th>
-						<th>手机号码</th>
-						<th>住址</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<th scope="row">1</th>
-						<td>中国</td>
-						<td>张三</td>
-						<td>18000000000</td>
-						<td>上海</td>
-					</tr>
-					<tr>
-						<th scope="row">1</th>
-						<td>中国</td>
-						<td>李四</td>
-						<td>18000000000</td>
-						<td>上海</td>
-					</tr>
-					<tr>
-						<th scope="row">1</th>
-						<td>中国</td>
-						<td>王五</td>
-						<td>18000000000</td>
-						<td>上海</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<h2>3. 带边框的表格</h2>
-		<p class="lead">
-			添加 <code>.table-bordered</code> 类为表格和其中的每个单元格增加边框。
-		</p>
-		<div class="docs-example">
-			<table class="table table-bordered">
-				<caption>我是表格</caption>
-				<thead>
-					<tr>
-						<th>#</th>
-						<th>籍贯</th>
-						<th>姓名</th>
-						<th>手机号码</th>
-						<th>住址</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<th scope="row">1</th>
-						<td>中国</td>
-						<td>张三</td>
-						<td>18000000000</td>
-						<td>上海</td>
-					</tr>
-					<tr>
-						<th scope="row">1</th>
-						<td>中国</td>
-						<td>李四</td>
-						<td>18000000000</td>
-						<td>上海</td>
-					</tr>
-					<tr>
-						<th scope="row">1</th>
-						<td>中国</td>
-						<td>王五</td>
-						<td>18000000000</td>
-						<td>上海</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<h2>4. 鼠标悬停</h2>
-		<p class="lead">
-			通过添加 <code>.table-hover</code> 类可以让 <code>&lt;tbody&gt;</code> 中的每一行对鼠标悬停状态作出响应。
-		</p>
-		<div class="docs-example">
-			<table class="table table-hover">
-				<caption>我是表格</caption>
-				<thead>
-					<tr>
-						<th>#</th>
-						<th>籍贯</th>
-						<th>姓名</th>
-						<th>手机号码</th>
-						<th>住址</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<th scope="row">1</th>
-						<td>中国</td>
-						<td>张三</td>
-						<td>18000000000</td>
-						<td>上海</td>
-					</tr>
-					<tr>
-						<th scope="row">1</th>
-						<td>中国</td>
-						<td>李四</td>
-						<td>18000000000</td>
-						<td>上海</td>
-					</tr>
-					<tr>
-						<th scope="row">1</th>
-						<td>中国</td>
-						<td>王五</td>
-						<td>18000000000</td>
-						<td>上海</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<h2>5. 紧缩表格</h2>
-		<p class="lead">
-			通过添加 <code>.table-condensed</code> 类可以让表格更加紧凑，单元格中的内补（padding）均会减半。
-		</p>
-		<div class="docs-example">
-			<table class="table table-condensed">
-				<caption>我是表格</caption>
-				<thead>
-					<tr>
-						<th>#</th>
-						<th>籍贯</th>
-						<th>姓名</th>
-						<th>手机号码</th>
-						<th>住址</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<th scope="row">1</th>
-						<td>中国</td>
-						<td>张三</td>
-						<td>18000000000</td>
-						<td>上海</td>
-					</tr>
-					<tr>
-						<th scope="row">1</th>
-						<td>中国</td>
-						<td>李四</td>
-						<td>18000000000</td>
-						<td>上海</td>
-					</tr>
-					<tr>
-						<th scope="row">1</th>
-						<td>中国</td>
-						<td>王五</td>
-						<td>18000000000</td>
-						<td>上海</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<h2>6. 响应式表格</h2>
-		<p class="lead">
-			将任何 <code>.table</code> 元素包裹在 <code>.table-responsive</code> 元素内，即可创建响应式表格，其会在小屏幕设备上（小于768px）水平滚动。当屏幕大于 768px 宽度时，水平滚动条消失。
-		</p>
-		<div class="docs-example">
-			<div class="table-responsive">
-				<table class="table table-bordered">
+		<div class="col-md-9">
+			<h1 class="page-head">三、表格</h1>
+			<h2>1. 基本实例</h2>
+			<p class="lead">
+				为任意 <code>&lt;table&gt;</code> 标签添加 <code>.table</code> 类可以为其赋予基本的样式 — 少量的内补（padding）和水平方向的分隔线。这种方式看起来很多余！？但是我们觉得，表格元素使用的很广泛，如果我们为其赋予默认样式可能会影响例如日历和日期选择之类的插件，所以我们选择将此样式独立出来。
+			</p>
+			<div class="docs-example">
+				<table class="table">
 					<caption>我是表格</caption>
 					<thead>
 						<tr>
@@ -239,11 +24,6 @@
 							<th>籍贯</th>
 							<th>姓名</th>
 							<th>手机号码</th>
-							<th>住址</th>
-							<th>住址</th>
-							<th>住址</th>
-							<th>住址</th>
-							<th>住址</th>
 							<th>住址</th>
 						</tr>
 					</thead>
@@ -254,22 +34,12 @@
 							<td>张三</td>
 							<td>18000000000</td>
 							<td>上海</td>
-							<td>上海</td>
-							<td>上海</td>
-							<td>上海</td>
-							<td>上海</td>
-							<td>上海</td>
 						</tr>
 						<tr>
 							<th scope="row">1</th>
 							<td>中国</td>
 							<td>李四</td>
 							<td>18000000000</td>
-							<td>上海</td>
-							<td>上海</td>
-							<td>上海</td>
-							<td>上海</td>
-							<td>上海</td>
 							<td>上海</td>
 						</tr>
 						<tr>
@@ -278,15 +48,246 @@
 							<td>王五</td>
 							<td>18000000000</td>
 							<td>上海</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<h2>2. 条纹状表格</h2>
+			<p class="lead">
+				通过 <code>.table-striped</code> 类可以给 <code>&lt;tbody&gt;</code> 之内的每一行增加斑马条纹样式。
+			</p>
+			<blockquote class="docs-blockquote">
+				<h4>跨浏览器兼容性</h4>
+				<p>
+					条纹状表格是依赖 <code>:nth-child</code> CSS 选择器实现的，而这一功能不被 Internet Explorer 8 支持。
+				</p>
+			</blockquote>
+			<div class="docs-example">
+				<table class="table table-striped">
+					<caption>我是表格</caption>
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>籍贯</th>
+							<th>姓名</th>
+							<th>手机号码</th>
+							<th>住址</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">1</th>
+							<td>中国</td>
+							<td>张三</td>
+							<td>18000000000</td>
 							<td>上海</td>
+						</tr>
+						<tr>
+							<th scope="row">1</th>
+							<td>中国</td>
+							<td>李四</td>
+							<td>18000000000</td>
 							<td>上海</td>
-							<td>上海</td>
-							<td>上海</td>
+						</tr>
+						<tr>
+							<th scope="row">1</th>
+							<td>中国</td>
+							<td>王五</td>
+							<td>18000000000</td>
 							<td>上海</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
+			<h2>3. 带边框的表格</h2>
+			<p class="lead">
+				添加 <code>.table-bordered</code> 类为表格和其中的每个单元格增加边框。
+			</p>
+			<div class="docs-example">
+				<table class="table table-bordered">
+					<caption>我是表格</caption>
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>籍贯</th>
+							<th>姓名</th>
+							<th>手机号码</th>
+							<th>住址</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">1</th>
+							<td>中国</td>
+							<td>张三</td>
+							<td>18000000000</td>
+							<td>上海</td>
+						</tr>
+						<tr>
+							<th scope="row">1</th>
+							<td>中国</td>
+							<td>李四</td>
+							<td>18000000000</td>
+							<td>上海</td>
+						</tr>
+						<tr>
+							<th scope="row">1</th>
+							<td>中国</td>
+							<td>王五</td>
+							<td>18000000000</td>
+							<td>上海</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<h2>4. 鼠标悬停</h2>
+			<p class="lead">
+				通过添加 <code>.table-hover</code> 类可以让 <code>&lt;tbody&gt;</code> 中的每一行对鼠标悬停状态作出响应。
+			</p>
+			<div class="docs-example">
+				<table class="table table-hover">
+					<caption>我是表格</caption>
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>籍贯</th>
+							<th>姓名</th>
+							<th>手机号码</th>
+							<th>住址</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">1</th>
+							<td>中国</td>
+							<td>张三</td>
+							<td>18000000000</td>
+							<td>上海</td>
+						</tr>
+						<tr>
+							<th scope="row">1</th>
+							<td>中国</td>
+							<td>李四</td>
+							<td>18000000000</td>
+							<td>上海</td>
+						</tr>
+						<tr>
+							<th scope="row">1</th>
+							<td>中国</td>
+							<td>王五</td>
+							<td>18000000000</td>
+							<td>上海</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<h2>5. 紧缩表格</h2>
+			<p class="lead">
+				通过添加 <code>.table-condensed</code> 类可以让表格更加紧凑，单元格中的内补（padding）均会减半。
+			</p>
+			<div class="docs-example">
+				<table class="table table-condensed">
+					<caption>我是表格</caption>
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>籍贯</th>
+							<th>姓名</th>
+							<th>手机号码</th>
+							<th>住址</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">1</th>
+							<td>中国</td>
+							<td>张三</td>
+							<td>18000000000</td>
+							<td>上海</td>
+						</tr>
+						<tr>
+							<th scope="row">1</th>
+							<td>中国</td>
+							<td>李四</td>
+							<td>18000000000</td>
+							<td>上海</td>
+						</tr>
+						<tr>
+							<th scope="row">1</th>
+							<td>中国</td>
+							<td>王五</td>
+							<td>18000000000</td>
+							<td>上海</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<h2>6. 响应式表格</h2>
+			<p class="lead">
+				将任何 <code>.table</code> 元素包裹在 <code>.table-responsive</code> 元素内，即可创建响应式表格，其会在小屏幕设备上（小于768px）水平滚动。当屏幕大于 768px 宽度时，水平滚动条消失。
+			</p>
+			<div class="docs-example">
+				<div class="table-responsive">
+					<table class="table table-bordered">
+						<caption>我是表格</caption>
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>籍贯</th>
+								<th>姓名</th>
+								<th>手机号码</th>
+								<th>住址</th>
+								<th>住址</th>
+								<th>住址</th>
+								<th>住址</th>
+								<th>住址</th>
+								<th>住址</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">1</th>
+								<td>中国</td>
+								<td>张三</td>
+								<td>18000000000</td>
+								<td>上海</td>
+								<td>上海</td>
+								<td>上海</td>
+								<td>上海</td>
+								<td>上海</td>
+								<td>上海</td>
+							</tr>
+							<tr>
+								<th scope="row">1</th>
+								<td>中国</td>
+								<td>李四</td>
+								<td>18000000000</td>
+								<td>上海</td>
+								<td>上海</td>
+								<td>上海</td>
+								<td>上海</td>
+								<td>上海</td>
+								<td>上海</td>
+							</tr>
+							<tr>
+								<th scope="row">1</th>
+								<td>中国</td>
+								<td>王五</td>
+								<td>18000000000</td>
+								<td>上海</td>
+								<td>上海</td>
+								<td>上海</td>
+								<td>上海</td>
+								<td>上海</td>
+								<td>上海</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<%include _parts/nav%>
 		</div>
 	</div>
 </div>

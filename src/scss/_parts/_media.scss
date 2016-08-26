@@ -14,7 +14,7 @@
   }
 } @else {
   .media {
-    margin-top: 15px;
+    margin-top: $media-margin-top;
 
     &:first-child {
       margin-top: 0;
@@ -23,7 +23,6 @@
   .media,
   .media-body {
     overflow: hidden;
-    zoom: 1;
   }
   .media-body {
     width: 10000px;
@@ -42,14 +41,6 @@
   }
 }
 
-.media {
-  font-size: $media-font-size;
-  .media-body {
-    p {
-      margin-bottom: $media-p-margin-bottom;
-    }
-  }
-}
 
 //
 // Images/elements as the media anchor
@@ -70,11 +61,11 @@
 //
 
 .media-right {
-  padding-left: 10px;
+  padding-left: $media-alignment-padding-x;
 }
 
 .media-left {
-  padding-right: 10px;
+  padding-right: $media-alignment-padding-x;
 }
 
 
@@ -84,8 +75,7 @@
 
 .media-heading {
   margin-top: 0;
-  margin-bottom: 5px;
-  font-size: $media-heading-font-size;
+  margin-bottom: $media-heading-margin-bottom;
 }
 
 

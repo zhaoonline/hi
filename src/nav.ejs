@@ -1,5 +1,5 @@
-<%include _parts/head%>
-<%include _parts/header%>
+<%include ./_parts/head%>
+<%include ./_parts/header%>
 
 <!--
 ==================================================
@@ -9,10 +9,32 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-3 col-md-push-9">
+		<div class="col-md-9">
+            <h1 class="page-head">八、链接和导航</h1>
+            <h2>1. 基本实例</h2>
+            <p class="lead">
+                Roll your own navigation style by extending the base <code>.nav</code> component. All Bootstrap’s nav components are built on top of this. Includes styles for the disabled state, but <strong>not the active state</strong>.
+            </p>
+            <div class="docs-example">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">链接</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">链接</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">链接</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">禁用链接</a>
+                    </li>
+                </ul>
+            </div>
+		</div>
+		<div class="col-md-3">
 			<%include _parts/nav%>
 		</div>
-	<div class="col-md-9 col-md-pull-3">
 	</div>
 </div>
 

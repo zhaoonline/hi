@@ -3,6 +3,6 @@
 // Includes all the imports from the standard Bootstrap project, but enables
 // the flexbox variable.
 
-$enable-flex: false;
+$enable-flex: true;
 
-@import "bootstrap";
+@import "../hi.scss";

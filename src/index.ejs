@@ -1,5 +1,5 @@
-<%include _parts/head%>
-<%include _parts/header%>
+<%include ./_parts/head%>
+<%include ./_parts/header%>
 
 <!--
 ==================================================
@@ -7,31 +7,26 @@
 ==================================================
 -->
 
-<div class="section-header">
-	<div class="container">
-		<h1>Hi UI</h1>
-		<p class="lead">简洁、直观、强悍、轻量的前端框架，让web开发更迅速.</p>
-	</div>
-</div>
 <div class="container">
 	<div class="row">
-		<div class="col-md-3 col-md-push-9">
+		<div class="col-md-9">
+			<h1 class="page-head">概览</h1>
+			<p class="lead">深入了解 Hi 底层结构的关键部分，包括我们让 web 开发变得更好、更快、更强壮的最佳实践。</p>
+			<h2>HTML5文档类型</h2>
+			<p class="lead">
+				Hi 使用到的某些 HTML 元素和 CSS 属性需要将页面设置为 HTML5 文档类型。在你项目中的每个页面都要参照下面的格式进行设置。
+			</p>
+			<div class="highlight">
+				<pre>&lt;!DOCTYPE html&gt;<br>&lt;html lang="zh-CN"&gt;<br> ...  <br>&lt;/html&gt;</pre>
+			</div>
+			<h1>栅格系统</h1>
+			<p>
+				Hi 提供了一套响应式、移动设备优先的流式栅格系统，随着屏幕或视口（viewport）尺寸的增加，系统会自动分为最多12列。
+			</p>
+		</div>
+		<div class="col-md-3">
 			<%include _parts/nav%>
 		</div>
-	<div class="col-md-9 col-md-pull-3">
-		<h1 class="page-head">概览</h1>
-		<p class="lead">深入了解 Hi 底层结构的关键部分，包括我们让 web 开发变得更好、更快、更强壮的最佳实践。</p>
-		<h2>HTML5文档类型</h2>
-		<p class="lead">
-			Hi 使用到的某些 HTML 元素和 CSS 属性需要将页面设置为 HTML5 文档类型。在你项目中的每个页面都要参照下面的格式进行设置。
-		</p>
-		<div class="highlight">
-			<pre>&lt;!DOCTYPE html&gt;<br>&lt;html lang="zh-CN"&gt;<br> ...  <br>&lt;/html&gt;</pre>
-		</div>
-		<h1>栅格系统</h1>
-		<p>
-			Hi 提供了一套响应式、移动设备优先的流式栅格系统，随着屏幕或视口（viewport）尺寸的增加，系统会自动分为最多12列。
-		</p>
 	</div>
 </div>
 

@@ -1,10 +1,12 @@
 /*!
- * Hi v1.0.0 (http://github.com/zhaoonline/hi)
- * Copyright 2011-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/zhaoonline/blob/master/LICENSE)
+ * Bootstrap v4.0.0-alpha.3 (http://getbootstrap.com)
+ * Copyright 2011-2016 The Bootstrap Authors
+ * Copyright 2011-2016 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
 // Core variables and mixins
+@import "_parts/custom";
 @import "_parts/variables";
 @import "_parts/mixins";
 
@@ -23,34 +25,30 @@
 @import "_parts/buttons";
 
 // Components
-// @import "_parts/animation";
-// @import "_parts/dropdown";
+@import "_parts/animation";
+@import "_parts/dropdown";
 @import "_parts/button-group";
-// @import "_parts/input-group";
-// @import "_parts/custom-forms";
-// @import "_parts/nav";
-// @import "_parts/navbar";
+@import "_parts/input-group";
+@import "_parts/custom-forms";
+@import "_parts/nav";
+@import "_parts/navbar";
 @import "_parts/card";
-// @import "_parts/breadcrumb";
-// @import "_parts/pagination";
-// @import "_parts/pager";
-@import "_parts/labels";
-// @import "_parts/jumbotron";
-// @import "_parts/alert";
-// @import "_parts/progress";
+@import "_parts/breadcrumb";
+@import "_parts/pagination";
+@import "_parts/tags";
+@import "_parts/jumbotron";
+@import "_parts/alert";
+@import "_parts/progress";
 @import "_parts/media";
 @import "_parts/list-group";
-// @import "_parts/responsive-embed";
-// @import "_parts/close";
+@import "_parts/responsive-embed";
+@import "_parts/close";
 
-// Components JavaScript
-// @import "_parts/modal";
-// @import "_parts/tooltip";
-// @import "_parts/popover";
-// @import "_parts/carousel";
+// Components w/ JavaScript
+@import "_parts/modal";
+@import "_parts/tooltip";
+@import "_parts/popover";
+@import "_parts/carousel";
 
 // Utility classes
 @import "_parts/utilities";
-@import "_parts/utilities-background";
-@import "_parts/utilities-spacing";
-@import "_parts/utilities-responsive";

@@ -1,5 +1,5 @@
-<%include _parts/head%>
-<%include _parts/header%>
+<%include ./_parts/head%>
+<%include ./_parts/header%>
 <!--
 ==================================================
 		            Content
@@ -7,10 +7,7 @@
 -->
 <div class="container">
     <div class="row">
-        <div class="col-md-3 col-md-push-9">
-            <%include _parts/nav%>
-        </div>
-        <div class="col-md-9 col-md-pull-3">
+        <div class="col-md-9">
             <h1 class="page-head">
                 八、卡片
             </h1>
@@ -565,6 +562,9 @@
                 </div>
             </div>
         </div>
+		<div class="col-md-3">
+			<%include _parts/nav%>
+		</div>
     </div>
     <%include _parts/foot%>
 </div>
