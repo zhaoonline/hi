@@ -61,7 +61,6 @@ $brand-inverse:             $gray-dark !default;
 // Quickly modify global styling by enabling or disabling optional features.
 
 $enable-flex:               false !default;
-$enable-media:              false !default;
 $enable-rounded:            true !default;
 $enable-shadows:            true !default;
 $enable-gradients:          false !default;
@@ -147,7 +146,7 @@ $container-max-widths: (
 ) !default;
 @include _assert-ascending($container-max-widths, "$container-max-widths");
 
-$container-base-width:               1000px !default;
+$container-width-base:               1000px !default;
 $container-width-min:                990px !default;
 $container-width-max:                1190px !default;
 

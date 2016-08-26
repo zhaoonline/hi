@@ -14,9 +14,37 @@
 
 // Generate cup grid
 @mixin make-cup($name: container, $left: $container-cup-left, $right: $container-cup-right) {
-  @include clear();
+  .#{$name}-cup {
+    .cup-main {
+      float: left;
+      width: 100%;
+      .inner {
+        float: left;
+        min-width: $container-width-base - $left -$right;
+        @if $left {
+          margin-left: $left;
+        }
+        @if $right {
+          margin-right: $right;
+        }
+      }
+    }
+    @if $left {
+      .cup-left {
+        float: left;
+        width: $left;
+        margin-left: -100%;
+      }
+    }
+    @if $right {
+      .cup-right {
+        float: left;
+        width: $right;
+        margin-left: -$right;
+      }
+    }
+  }
 }
-
 
 // For each breakpoint, define the maximum width of the container in a media query
 @mixin make-container-max-widths($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints) {

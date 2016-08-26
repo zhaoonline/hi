@@ -1,10 +1,8 @@
 // container center block
+
 @mixin center-block($width) {
     @if $width {
         width: $width;
-    } @else {
-        min-width: $container-width-min;
-        max-width: $container-width-max;
     }
     position: relative;
     margin: 0 auto;

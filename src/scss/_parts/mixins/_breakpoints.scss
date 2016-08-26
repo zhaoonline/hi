@@ -43,11 +43,9 @@
 @mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
   $min: breakpoint-min($name, $breakpoints);
   @if $min {
-    //@if $enable-media {
-      @media (min-width: $min) {
-        @content;
-      }
-    //}
+    @media (min-width: $min) {
+      @content;
+    }
   } @else {
     @content;
   }
@@ -58,11 +56,9 @@
 @mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
   $max: breakpoint-max($name, $breakpoints);
   @if $max {
-    //@if $enable-media {
-      @media (max-width: $max) {
-        @content;
-      }
-    //}
+    @media (max-width: $max) {
+      @content;
+    }
   } @else {
     @content;
   }
