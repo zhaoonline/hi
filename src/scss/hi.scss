@@ -36,12 +36,12 @@ $enable-media:               true !default;
 @import "./_parts/card";
 // @import "./_parts/breadcrumb";
 // @import "./_parts/pagination";
-// @import "./_parts/tags";
+@import "./_parts/tags";
 // @import "./_parts/jumbotron";
 // @import "./_parts/alert";
 // @import "./_parts/progress";
 // @import "./_parts/media";
-// @import "./_parts/list-group";
+@import "./_parts/list-group";
 // @import "./_parts/responsive-embed";
 // @import "./_parts/close";
 
