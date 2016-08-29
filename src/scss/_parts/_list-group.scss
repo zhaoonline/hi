@@ -90,6 +90,8 @@
     h3 {
       line-height: 30px;
       height: 30px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
     p {
       line-height: 20px;
