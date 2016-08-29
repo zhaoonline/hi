@@ -10,7 +10,7 @@
 }
 
 .nav-link {
-  display: inline-block;
+  @include display-inline-block();
 
   @include hover-focus {
     text-decoration: none;
@@ -33,7 +33,7 @@
 
 .nav-inline {
   .nav-item {
-    display: inline-block;
+    @include display-inline-block();
   }
 
   .nav-item + .nav-item,

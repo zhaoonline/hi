@@ -228,7 +228,7 @@ select.form-control-lg {
 // Radios and checkboxes on same line
 .form-check-inline {
   position: relative;
-  display: inline-block;
+  @include display-inline-block();
   padding-left: 16px;
   margin-bottom: 0; // Override default `<label>` bottom margin
   vertical-align: middle;
@@ -299,21 +299,21 @@ select.form-control-lg {
 .form-inline {
   // Inline-block all the things for "inline"
   .form-group {
-    display: inline-block;
+    @include display-inline-block();
     margin-bottom: 0;
     vertical-align: middle;
   }
 
   // Allow folks to *not* use `.form-group`
   .form-control {
-    display: inline-block;
+    @include display-inline-block();
     width: auto; // Prevent labels from stacking above inputs in `.form-group`
     vertical-align: middle;
   }
 
   // Make static controls behave like regular ones
   .form-control-static {
-    display: inline-block;
+    @include display-inline-block();
   }
 
   .input-group {
@@ -340,7 +340,7 @@ select.form-control-lg {
   // Remove default margin on radios/checkboxes that were used for stacking, and
   // then undo the floating of radios and checkboxes to match.
   .form-check {
-    display: inline-block;
+    @include display-inline-block();
     margin-top: 0;
     margin-bottom: 0;
     vertical-align: middle;

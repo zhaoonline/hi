@@ -1,9 +1,1 @@
 // container center block
-
-@mixin center-block($width) {
-    @if $width {
-        width: $width;
-    }
-    position: relative;
-    margin: 0 auto;
-}
