@@ -19,7 +19,6 @@
       float: left;
       width: 100%;
       .inner {
-        float: left;
         min-width: $container-width-base - $left -$right;
         @if $left {
           margin-left: $left;
