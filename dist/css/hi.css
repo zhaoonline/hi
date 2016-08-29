@@ -5,6 +5,12 @@
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+.clear {
+  font-size: 0;
+  width: 0;
+  height: 0;
+  clear: both; }
+
 /*! normalize.css v4.0.0 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
@@ -622,29 +628,24 @@ pre {
     .container {
       max-width: 1140px; } }
 
-clear: both;
-.container-cup {
-  width: 1000px;
-  position: relative;
-  margin: 0 auto; }
-  .container-cup .cup-main {
+.container-cup .cup-main {
+  float: left;
+  width: 100%; }
+  .container-cup .cup-main .inner {
     float: left;
-    width: 100%;
-    min-width: 990px;
-    max-width: 1190px; }
-    .container-cup .cup-main .inner {
-      float: left;
-      width: 100%;
-      margin-left: 200px;
-      margin-right: 300px; }
-  .container-cup .cup-left {
-    float: left;
-    width: 200px;
-    margin-left: -100%; }
-  .container-cup .cup-right {
-    float: left;
-    width: 300px;
-    margin-left: -300px; }
+    min-width: 500px;
+    margin-left: 200px;
+    margin-right: 300px; }
+
+.container-cup .cup-left {
+  float: left;
+  width: 200px;
+  margin-left: -100%; }
+
+.container-cup .cup-right {
+  float: left;
+  width: 300px;
+  margin-left: -300px; }
 
 .container-fluid {
   margin-left: auto;
@@ -670,117 +671,164 @@ clear: both;
   padding-right: 15px;
   padding-left: 15px; }
 
-@media (min-width: null) {
-  .col-xs-1 {
-    float: left;
-    width: 8.33333%; }
-  .col-xs-2 {
-    float: left;
-    width: 16.66667%; }
-  .col-xs-3 {
-    float: left;
-    width: 25%; }
-  .col-xs-4 {
-    float: left;
-    width: 33.33333%; }
-  .col-xs-5 {
-    float: left;
-    width: 41.66667%; }
-  .col-xs-6 {
-    float: left;
-    width: 50%; }
-  .col-xs-7 {
-    float: left;
-    width: 58.33333%; }
-  .col-xs-8 {
-    float: left;
-    width: 66.66667%; }
-  .col-xs-9 {
-    float: left;
-    width: 75%; }
-  .col-xs-10 {
-    float: left;
-    width: 83.33333%; }
-  .col-xs-11 {
-    float: left;
-    width: 91.66667%; }
-  .col-xs-12 {
-    float: left;
-    width: 100%; }
-  .pull-xs-0 {
-    right: auto; }
-  .pull-xs-1 {
-    right: 8.33333%; }
-  .pull-xs-2 {
-    right: 16.66667%; }
-  .pull-xs-3 {
-    right: 25%; }
-  .pull-xs-4 {
-    right: 33.33333%; }
-  .pull-xs-5 {
-    right: 41.66667%; }
-  .pull-xs-6 {
-    right: 50%; }
-  .pull-xs-7 {
-    right: 58.33333%; }
-  .pull-xs-8 {
-    right: 66.66667%; }
-  .pull-xs-9 {
-    right: 75%; }
-  .pull-xs-10 {
-    right: 83.33333%; }
-  .pull-xs-11 {
-    right: 91.66667%; }
-  .pull-xs-12 {
-    right: 100%; }
-  .push-xs-0 {
-    left: auto; }
-  .push-xs-1 {
-    left: 8.33333%; }
-  .push-xs-2 {
-    left: 16.66667%; }
-  .push-xs-3 {
-    left: 25%; }
-  .push-xs-4 {
-    left: 33.33333%; }
-  .push-xs-5 {
-    left: 41.66667%; }
-  .push-xs-6 {
-    left: 50%; }
-  .push-xs-7 {
-    left: 58.33333%; }
-  .push-xs-8 {
-    left: 66.66667%; }
-  .push-xs-9 {
-    left: 75%; }
-  .push-xs-10 {
-    left: 83.33333%; }
-  .push-xs-11 {
-    left: 91.66667%; }
-  .push-xs-12 {
-    left: 100%; }
-  .offset-xs-1 {
-    margin-left: 8.33333%; }
-  .offset-xs-2 {
-    margin-left: 16.66667%; }
-  .offset-xs-3 {
-    margin-left: 25%; }
-  .offset-xs-4 {
-    margin-left: 33.33333%; }
-  .offset-xs-5 {
-    margin-left: 41.66667%; }
-  .offset-xs-6 {
-    margin-left: 50%; }
-  .offset-xs-7 {
-    margin-left: 58.33333%; }
-  .offset-xs-8 {
-    margin-left: 66.66667%; }
-  .offset-xs-9 {
-    margin-left: 75%; }
-  .offset-xs-10 {
-    margin-left: 83.33333%; }
-  .offset-xs-11 {
-    margin-left: 91.66667%; } }
+.col-xs-1 {
+  float: left;
+  width: 8.33333%; }
+
+.col-xs-2 {
+  float: left;
+  width: 16.66667%; }
+
+.col-xs-3 {
+  float: left;
+  width: 25%; }
+
+.col-xs-4 {
+  float: left;
+  width: 33.33333%; }
+
+.col-xs-5 {
+  float: left;
+  width: 41.66667%; }
+
+.col-xs-6 {
+  float: left;
+  width: 50%; }
+
+.col-xs-7 {
+  float: left;
+  width: 58.33333%; }
+
+.col-xs-8 {
+  float: left;
+  width: 66.66667%; }
+
+.col-xs-9 {
+  float: left;
+  width: 75%; }
+
+.col-xs-10 {
+  float: left;
+  width: 83.33333%; }
+
+.col-xs-11 {
+  float: left;
+  width: 91.66667%; }
+
+.col-xs-12 {
+  float: left;
+  width: 100%; }
+
+.pull-xs-0 {
+  right: auto; }
+
+.pull-xs-1 {
+  right: 8.33333%; }
+
+.pull-xs-2 {
+  right: 16.66667%; }
+
+.pull-xs-3 {
+  right: 25%; }
+
+.pull-xs-4 {
+  right: 33.33333%; }
+
+.pull-xs-5 {
+  right: 41.66667%; }
+
+.pull-xs-6 {
+  right: 50%; }
+
+.pull-xs-7 {
+  right: 58.33333%; }
+
+.pull-xs-8 {
+  right: 66.66667%; }
+
+.pull-xs-9 {
+  right: 75%; }
+
+.pull-xs-10 {
+  right: 83.33333%; }
+
+.pull-xs-11 {
+  right: 91.66667%; }
+
+.pull-xs-12 {
+  right: 100%; }
+
+.push-xs-0 {
+  left: auto; }
+
+.push-xs-1 {
+  left: 8.33333%; }
+
+.push-xs-2 {
+  left: 16.66667%; }
+
+.push-xs-3 {
+  left: 25%; }
+
+.push-xs-4 {
+  left: 33.33333%; }
+
+.push-xs-5 {
+  left: 41.66667%; }
+
+.push-xs-6 {
+  left: 50%; }
+
+.push-xs-7 {
+  left: 58.33333%; }
+
+.push-xs-8 {
+  left: 66.66667%; }
+
+.push-xs-9 {
+  left: 75%; }
+
+.push-xs-10 {
+  left: 83.33333%; }
+
+.push-xs-11 {
+  left: 91.66667%; }
+
+.push-xs-12 {
+  left: 100%; }
+
+.offset-xs-1 {
+  margin-left: 8.33333%; }
+
+.offset-xs-2 {
+  margin-left: 16.66667%; }
+
+.offset-xs-3 {
+  margin-left: 25%; }
+
+.offset-xs-4 {
+  margin-left: 33.33333%; }
+
+.offset-xs-5 {
+  margin-left: 41.66667%; }
+
+.offset-xs-6 {
+  margin-left: 50%; }
+
+.offset-xs-7 {
+  margin-left: 58.33333%; }
+
+.offset-xs-8 {
+  margin-left: 66.66667%; }
+
+.offset-xs-9 {
+  margin-left: 75%; }
+
+.offset-xs-10 {
+  margin-left: 83.33333%; }
+
+.offset-xs-11 {
+  margin-left: 91.66667%; }
 
 @media (min-width: 544px) {
   .col-sm-1 {
@@ -1620,41 +1668,49 @@ select.form-control-lg:not([size]):not([multiple]) {
 .has-danger .form-control-danger {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23d9534f' viewBox='-2 -2 7 7'%3E%3Cpath stroke='%23d9534f' d='M0 0l3 3m0-3L0 3'/%3E%3Ccircle r='.5'/%3E%3Ccircle cx='3' r='.5'/%3E%3Ccircle cy='3' r='.5'/%3E%3Ccircle cx='3' cy='3' r='.5'/%3E%3C/svg%3E"); }
 
-@media (min-width: 544px) {
-  .form-inline .form-group {
-    display: inline-block;
-    margin-bottom: 0;
-    vertical-align: middle; }
-  .form-inline .form-control {
-    display: inline-block;
-    width: auto;
-    vertical-align: middle; }
-  .form-inline .form-control-static {
-    display: inline-block; }
-  .form-inline .input-group {
-    display: inline-table;
-    vertical-align: middle; }
-    .form-inline .input-group .input-group-addon,
-    .form-inline .input-group .input-group-btn,
-    .form-inline .input-group .form-control {
-      width: auto; }
-  .form-inline .input-group > .form-control {
-    width: 100%; }
-  .form-inline .form-control-label {
-    margin-bottom: 0;
-    vertical-align: middle; }
-  .form-inline .form-check {
-    display: inline-block;
-    margin-top: 0;
-    margin-bottom: 0;
-    vertical-align: middle; }
-  .form-inline .form-check-label {
-    padding-left: 0; }
-  .form-inline .form-check-input {
-    position: relative;
-    margin-left: 0; }
-  .form-inline .has-feedback .form-control-feedback {
-    top: 0; } }
+.form-inline .form-group {
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle; }
+
+.form-inline .form-control {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle; }
+
+.form-inline .form-control-static {
+  display: inline-block; }
+
+.form-inline .input-group {
+  display: inline-table;
+  vertical-align: middle; }
+  .form-inline .input-group .input-group-addon,
+  .form-inline .input-group .input-group-btn,
+  .form-inline .input-group .form-control {
+    width: auto; }
+
+.form-inline .input-group > .form-control {
+  width: 100%; }
+
+.form-inline .form-control-label {
+  margin-bottom: 0;
+  vertical-align: middle; }
+
+.form-inline .form-check {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  vertical-align: middle; }
+
+.form-inline .form-check-label {
+  padding-left: 0; }
+
+.form-inline .form-check-input {
+  position: relative;
+  margin-left: 0; }
+
+.form-inline .has-feedback .form-control-feedback {
+  top: 0; }
 
 .btn {
   display: inline-block;

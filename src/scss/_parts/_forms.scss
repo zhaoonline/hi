@@ -297,68 +297,64 @@ select.form-control-lg {
 // default HTML form controls and our custom form controls (e.g., input groups).
 
 .form-inline {
+  // Inline-block all the things for "inline"
+  .form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
 
-  // Kick in the inline
-  @include media-breakpoint-up(sm) {
-    // Inline-block all the things for "inline"
-    .form-group {
-      display: inline-block;
-      margin-bottom: 0;
-      vertical-align: middle;
-    }
+  // Allow folks to *not* use `.form-group`
+  .form-control {
+    display: inline-block;
+    width: auto; // Prevent labels from stacking above inputs in `.form-group`
+    vertical-align: middle;
+  }
 
-    // Allow folks to *not* use `.form-group`
+  // Make static controls behave like regular ones
+  .form-control-static {
+    display: inline-block;
+  }
+
+  .input-group {
+    display: inline-table;
+    vertical-align: middle;
+
+    .input-group-addon,
+    .input-group-btn,
     .form-control {
-      display: inline-block;
-      width: auto; // Prevent labels from stacking above inputs in `.form-group`
-      vertical-align: middle;
+      width: auto;
     }
+  }
 
-    // Make static controls behave like regular ones
-    .form-control-static {
-      display: inline-block;
-    }
+  // Input groups need that 100% width though
+  .input-group > .form-control {
+    width: 100%;
+  }
 
-    .input-group {
-      display: inline-table;
-      vertical-align: middle;
+  .form-control-label {
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
 
-      .input-group-addon,
-      .input-group-btn,
-      .form-control {
-        width: auto;
-      }
-    }
+  // Remove default margin on radios/checkboxes that were used for stacking, and
+  // then undo the floating of radios and checkboxes to match.
+  .form-check {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .form-check-label {
+    padding-left: 0;
+  }
+  .form-check-input {
+    position: relative;
+    margin-left: 0;
+  }
 
-    // Input groups need that 100% width though
-    .input-group > .form-control {
-      width: 100%;
-    }
-
-    .form-control-label {
-      margin-bottom: 0;
-      vertical-align: middle;
-    }
-
-    // Remove default margin on radios/checkboxes that were used for stacking, and
-    // then undo the floating of radios and checkboxes to match.
-    .form-check {
-      display: inline-block;
-      margin-top: 0;
-      margin-bottom: 0;
-      vertical-align: middle;
-    }
-    .form-check-label {
-      padding-left: 0;
-    }
-    .form-check-input {
-      position: relative;
-      margin-left: 0;
-    }
-
-    // Re-override the feedback icon.
-    .has-feedback .form-control-feedback {
-      top: 0;
-    }
+  // Re-override the feedback icon.
+  .has-feedback .form-control-feedback {
+    top: 0;
   }
 }
