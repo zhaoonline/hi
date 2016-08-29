@@ -200,7 +200,7 @@
 // Those changes are noted by `// Margin balancing`.
 
 @if $enable-flex {
-  @include media-breakpoint-up(sm) {
+  // @include media-breakpoint-up(sm) {
     .card-deck {
       display: flex;
       flex-flow: row wrap;
@@ -215,10 +215,10 @@
         margin-left: $card-deck-margin;
       }
     }
-  }
+  // }
 } @else {
-  @include media-breakpoint-up(sm) {
-    $space-between-cards: (2 * $card-deck-margin);
+  // @include media-breakpoint-up(sm) {
+     $space-between-cards: (2 * $card-deck-margin);
     .card-deck {
       display: table;
       width: 100%;
@@ -236,14 +236,14 @@
       margin-right: (-$space-between-cards);
       margin-left: (-$space-between-cards);
     }
-  }
+  // }
 }
 
 //
 // Card groups
 //
 
-@include media-breakpoint-up(sm) {
+// @include media-breakpoint-up(sm) {
   .card-group {
     @if $enable-flex {
       display: flex;
@@ -301,21 +301,21 @@
       }
     }
   }
-}
+// }
 
 
 //
 // Card
 //
 
-@include media-breakpoint-up(sm) {
+// @include media-breakpoint-up(sm) {
   .card-columns {
     column-count: 3;
     column-gap: $card-columns-sm-up-column-gap;
 
     .card {
-      display: inline-block;
+      @include display-inline-block();
       width: 100%; // Don't let them exceed the column width
     }
   }
-}
+// }
