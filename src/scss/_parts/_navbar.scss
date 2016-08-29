@@ -8,9 +8,9 @@
   padding: $navbar-padding-y $navbar-padding-x;
   @include clearfix;
 
-  @include media-breakpoint-up(sm) {
+  // @include media-breakpoint-up(sm) {
     @include border-radius($navbar-border-radius);
-  }
+  // }
 }
 
 
@@ -23,9 +23,9 @@
 .navbar-full {
   z-index: $zindex-navbar;
 
-  @include media-breakpoint-up(sm) {
+  // @include media-breakpoint-up(sm) {
     @include border-radius(0);
-  }
+  // }
 }
 
 // Fix the top/bottom navbars when screen real estate supports it
@@ -37,9 +37,9 @@
   z-index: $zindex-navbar-fixed;
 
   // Undo the rounded corners
-  @include media-breakpoint-up(sm) {
+  // @include media-breakpoint-up(sm) {
     @include border-radius(0);
-  }
+  // }
 }
 
 .navbar-fixed-top {
@@ -57,9 +57,9 @@
   width: 100%;
 
   // Undo the rounded corners
-  @include media-breakpoint-up(sm) {
+  // @include media-breakpoint-up(sm) {
     @include border-radius(0);
-  }
+  // }
 }
 
 
@@ -218,41 +218,41 @@
 .navbar-toggleable {
   &-xs {
     @include clearfix;
-    @include media-breakpoint-down(xs) {
+    // @include media-breakpoint-down(xs) {
       .navbar-nav .nav-item {
         float: none;
         margin-left: 0;
       }
-    }
-    @include media-breakpoint-up(sm) {
+    // }
+    // @include media-breakpoint-up(sm) {
       display: block !important;
-    }
+    // }
   }
 
   &-sm {
     @include clearfix;
-    @include media-breakpoint-down(sm) {
+    // @include media-breakpoint-down(sm) {
       .navbar-nav .nav-item {
         float: none;
         margin-left: 0;
       }
-    }
-    @include media-breakpoint-up(md) {
+    // }
+    // @include media-breakpoint-up(md) {
       display: block !important;
-    }
+    // }
   }
 
   &-md {
     @include clearfix;
-    @include media-breakpoint-down(md) {
+    // @include media-breakpoint-down(md) {
       .navbar-nav .nav-item {
         float: none;
         margin-left: 0;
       }
-    }
-    @include media-breakpoint-up(lg) {
+    // }
+    // @include media-breakpoint-up(lg) {
       display: block !important;
-    }
+    // }
   }
 }
 // scss-lint:enable ImportantRule
