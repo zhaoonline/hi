@@ -5,6 +5,79 @@
 body {
     background: #f4f4f4;
 }
+.carousel {
+	position: relative;
+	width: 100%;
+	min-height: 200px;
+	overflow: hidden;
+	.carousel-box {
+		.carousel-content {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			> li {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				float: left;
+				position: relative;
+			}
+		}
+		.carousel-prev, .carousel-next {
+			position: absolute;
+			top: 50%;
+			margin-top: -35px;
+			z-index: 2;
+			width: 35px;
+			height: 70px;
+			font: 700 53px arial;
+			cursor: pointer;
+			text-align: center;
+			color: #f1f1f1;
+			text-decoration: none;
+			background-color:: rgba(0, 0, 0, .4);
+		}
+		.carousel-prev {
+			left: 5px;
+		}
+		.carousel-next {
+			right: 5px;
+		}
+		.nav-box {
+			position: absolute;
+			left: 50%;
+			bottom: 12px;
+			z-index: 30;
+			> ul {
+				height: 20px;
+				padding: 0 4px;
+				border-radius: 8px;
+				background: rgba(0,0,0,0.5);
+				> li {
+					float: left;
+					height: 12px;
+					margin: 4px 4px;
+					&.active {
+						> em {
+							background: red;
+						}
+					}
+					> em {
+						display: block;
+						width: 12px;
+						height: 12px;
+						border-radius: 100%;
+						background-color: #fff;
+						text-indent: -9999px;
+						cursor: pointer;
+
+					}
+				}
+			}
+		}
+	}
+}
 
 .navbar {
 	.navbar-transparent {
