@@ -8,4 +8,5 @@ $(function() {
     $("img[data-original]").lazyload({
         effect : "fadeIn"
     });
+    $('[data-toggle="tooltip"]').tooltip();
 });

@@ -47,9 +47,9 @@ $enable-media:               true !default;
 
 // Components w/ JavaScript
 // @import "./_parts/modal";
-// @import "./_parts/tooltip";
+@import "./_parts/tooltip";
 // @import "./_parts/popover";
 // @import "./_parts/carousel";
 
 // Utility classes
-// @import "./_parts/utilities";
+@import "./_parts/utilities";

@@ -1,7 +1,8 @@
 /*!
  * docs scss
  */
-
+@import "./_parts/variables";
+@import "./_parts/mixins";
 body {
     background: #f4f4f4;
 }
@@ -79,6 +80,13 @@ body {
 	}
 }
 
+.col-md-3, .col-md-9 {
+	padding: 0;
+	> :nth-child(n) {
+		padding: 0 15px;
+	}
+}
+
 .navbar {
 	.navbar-transparent {
 	}
@@ -137,6 +145,42 @@ body {
 	    }
 	    .card {
 	    	max-width: 320px;
+	    }
+	    .tooltip {
+	    	position: relative;
+	    	@include display-inline-block();
+	    	margin: 10px 20px;
+	    	opacity: 1;
+	    	.tooltip-arrow {
+	    	}
+	    	&.left .tooltip-arrow {
+				top: 50%;
+				right: -5px;
+				margin-top: -5px;
+				border-left-color: #000;
+				border-width: 5px 0 5px 5px;
+			}
+	    	&.top .tooltip-arrow {
+			    bottom: -5px;
+			    left: 50%;
+			    margin-left: -5px;
+			    border-width: 5px 5px 0;
+			    border-top-color: #000;
+			}
+	    	&.right .tooltip-arrow {
+			    top: 50%;
+			    left: -5px;
+			    margin-top: -5px;
+			    border-width: 5px 5px 5px 0;
+			    border-right-color: #000;
+			}
+	    	&.bottom .tooltip-arrow {
+			    top: -5px;
+			    left: 50%;
+			    margin-left: -5px;
+			    border-width: 0 5px 5px;
+			    border-bottom-color: #000;
+			}
 	    }
 	}
 }
